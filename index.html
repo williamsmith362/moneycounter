@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f2f2f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cash">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Cash Counter</title>
+<style>
+:root{--bg:#efeff1;--surf:#fff;--tile:#f1f1f3;--press:#dcdce0;--ink:#1c1c1e;--mid:#76767e;--line:#e2e2e6;--accent:#1c1c1e;--accent-fg:#fff;
+--num:ui-rounded,"SF Pro Rounded",-apple-system,system-ui,sans-serif;--txt:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root{--bg:#000;--surf:#1c1c1e;--tile:#2c2c2e;--press:#3a3a3d;--ink:#f2f2f4;--mid:#9a9aa1;--line:#2e2e31;--accent:#f2f2f4;--accent-fg:#000}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.35 var(--txt);overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{padding:0 max(14px,env(safe-area-inset-right)) calc(env(safe-area-inset-bottom) + 28px) max(14px,env(safe-area-inset-left))}
+button,input,textarea,summary{font:inherit;color:inherit}
+button{border:0;background:none;padding:0;cursor:pointer;-webkit-user-select:none;user-select:none;touch-action:manipulation;-webkit-touch-callout:none}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+header{position:sticky;top:0;z-index:5;margin:0 -14px;padding:calc(env(safe-area-inset-top) + 4px) 18px 10px;background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.t1{display:flex;justify-content:space-between;align-items:baseline;color:var(--mid);font-size:13px}
+#grand{display:block;font-size:46px;font-weight:700;letter-spacing:-.02em;line-height:1.05;color:var(--ink)}
+.parts{display:flex;gap:18px;margin-top:4px;font-size:13px;color:var(--mid)}
+.parts b{font-family:var(--num);font-weight:600;color:var(--ink);margin-left:4px}
+main{max-width:620px;margin:6px auto 0;display:flex;flex-direction:column;gap:14px}
+.group{background:var(--surf);border-radius:24px;padding:10px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--tile);border-radius:14px;padding:3px;margin-bottom:8px}
+.seg button{min-height:46px;border-radius:11px;font-size:16px;font-weight:600;color:var(--mid)}
+.seg button.on{background:var(--accent);color:var(--accent-fg)}
+.mode button{min-height:50px;font-size:17px;letter-spacing:.02em}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.tiles.c{grid-template-columns:repeat(4,1fr);gap:6px}
+.tile{background:var(--tile);border-radius:16px;min-height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;transition:transform .05s,background .05s}
+.tile:active{transform:scale(.955);background:var(--press)}
+.c .tile{min-height:64px;border-radius:14px;gap:2px}
+.d{font-family:var(--num);font-size:27px;font-weight:700;letter-spacing:-.01em;line-height:1}
+.c .d{font-size:20px}
+.d::before{content:"+";font-size:.6em;font-weight:600;color:var(--mid);margin-right:2px;vertical-align:.15em}
+.remove .d::before{content:"−";color:var(--ink)}
+.remove .tile{box-shadow:inset 0 0 0 2px var(--ink)}
+.q{font-family:var(--num);font-size:14px;font-weight:600;color:var(--mid);min-width:44px;padding:3px 10px;border-radius:10px;background:var(--surf)}
+.q{pointer-events:none}
+.tile{position:relative;overflow:hidden}
+.tile::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--ink);opacity:.5}
+.tile.holding::after{width:100%;transition:width .7s linear}
+.q.has{color:var(--ink)}
+.sum{display:flex;justify-content:space-between;align-items:baseline;padding:10px 6px 4px;border-top:1px solid var(--line);margin-top:2px}
+.sum span{font-size:15px;color:var(--mid)}
+.sum b{font-size:26px;font-weight:700}
+.bk{padding:0 6px 6px;font-size:14px;color:var(--mid)}
+.bk div{display:flex;justify-content:space-between;padding:3px 0;font-family:var(--num);font-variant-numeric:tabular-nums}
+.bk div b{font-weight:600;color:var(--ink)}
+.empty{font-size:14px;color:var(--mid);padding:2px 0 6px}
+.undo{width:100%;min-height:50px;border-radius:14px;background:var(--tile);font-size:16px;font-weight:600}
+.undo:disabled{opacity:.35}
+.undo:active:not(:disabled){background:var(--press)}
+.tx{display:flex;justify-content:space-between;align-items:center;padding:2px 8px 0 6px}
+.tx label{font-size:15px;color:var(--mid)}
+.tx input{width:60%;min-height:54px;text-align:right;font-family:var(--num);font-size:26px;font-weight:700;border:0;background:none;outline:none;padding:0 4px}
+.tx input::placeholder{color:var(--press)}
+details{background:var(--surf);border-radius:24px;padding:4px 10px}
+summary{list-style:none;padding:14px 6px;font-size:15px;color:var(--mid);cursor:pointer}
+summary::-webkit-details-marker{display:none}
+.row{display:block;width:100%;text-align:left;padding:14px 6px;font-size:16px;border-top:1px solid var(--line)}
+.row.danger{color:#b3261e}
+.row:active{background:var(--tile)}
+#toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 18px);transform:translate(-50%,20px);background:var(--accent);color:var(--accent-fg);padding:10px 16px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:.18s;z-index:30}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+#sheet{position:fixed;inset:0;z-index:20;display:none;background:rgba(0,0,0,.35)}
+#sheet.on{display:flex;align-items:flex-end;justify-content:center}
+.pane{width:100%;max-width:620px;background:var(--surf);border-radius:26px 26px 0 0;padding:18px 16px calc(env(safe-area-inset-bottom) + 16px);animation:up .16s ease-out}
+@keyframes up{from{transform:translateY(24px);opacity:.6}}
+.pane h2{margin:0 0 2px;font-size:18px}
+.pane p{margin:0 0 12px;color:var(--mid);font-size:14px}
+.pane input,.pane textarea{width:100%;border:0;border-radius:14px;background:var(--tile);padding:12px 14px;font-size:24px;font-family:var(--num);outline:none}
+.pane textarea{font-size:16px;height:110px;font-family:var(--txt)}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.acts.two{grid-template-columns:1fr 1fr}
+.acts button{min-height:50px;border-radius:14px;background:var(--tile);font-weight:600}
+.acts button.p{background:var(--accent);color:var(--accent-fg)}
+.acts button:active{background:var(--press)}
+@media(orientation:landscape) and (max-height:520px){
+ #grand{font-size:30px}main{max-width:none;display:grid;grid-template-columns:3fr 2fr;align-items:start}
+ .tile{min-height:58px}.d{font-size:21px}.c .tile{min-height:50px}
+}
+@media(prefers-reduced-motion:reduce){.tile,#toast,.pane{transition:none;animation:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="t1"><span>Total money</span><span id="stamp"></span></div>
+  <span id="grand" class="num">$0.00</span>
+  <div class="parts"><span>Pouch<b id="s-pouch">$0.00</b></span><span>Wallet<b id="s-wallet">$0.00</b></span><span>Bank<b id="s-bank">$0.00</b></span></div>
+</header>
+<main>
+ <div>
+  <div class="group" id="cash">
+   <div class="seg" id="where"><button data-w="pouch" class="on">Pouch</button><button data-w="wallet">Wallet</button></div>
+   <div class="seg mode" id="mode"><button data-m="add" class="on">Add</button><button data-m="remove">Remove</button></div>
+   <div class="tiles" id="bills"></div>
+   <div class="tiles c" id="coins"></div>
+   <div class="sum"><span id="sec-name">Pouch</span><b class="num" id="sec-total">$0.00</b></div>
+   <div class="bk" id="bk"></div>
+   <button class="undo" id="undo" disabled>Undo</button>
+  </div>
+ </div>
+ <div style="display:flex;flex-direction:column;gap:14px">
+  <div class="group tx"><label for="bank">Bank balance</label><input id="bank" class="num" inputmode="decimal" autocomplete="off" placeholder="$0.00"></div>
+  <details><summary>Settings</summary>
+   <button class="row" id="b-copy">Copy backup</button>
+   <button class="row" id="b-restore">Restore from backup</button>
+   <button class="row" id="b-clear">Clear this section</button>
+   <button class="row danger" id="b-reset">Reset all data</button>
+  </details>
+ </div>
+</main>
+<div id="sheet"><div class="pane" id="pane"></div></div>
+<div id="toast"></div>
+<script>
+(()=>{
+const BILLS=[10000,5000,2000,1000,500,100],COINS=[25,10,5,1],KEY='cash-counter-v1';
+const fresh=()=>({pouch:{},wallet:{},bank:0,ts:0});
+let S;try{S=JSON.parse(localStorage.getItem(KEY))||fresh()}catch(e){S=fresh()}
+S.pouch=S.pouch||{};S.wallet=S.wallet||{};S.bank=S.bank|0;S.ts=S.ts||0;
+let where='pouch',mode='add',hist=[];
+const $=i=>document.getElementById(i);
+const fmt=c=>'$'+(c/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const lab=v=>v>=100?'$'+v/100:v+'¢';
+const sum=o=>Object.entries(o).reduce((t,[k,n])=>t+k*n,0);
+const save=()=>{S.ts=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const cap=s=>s[0].toUpperCase()+s.slice(1);
+let tt;function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),1800)}
+const tiles=(el,l)=>el.innerHTML=l.map(v=>`<button class="tile" data-v="${v}"><span class="d">${lab(v)}</span><span class="q" data-q="${v}">0</span></button>`).join('');
+tiles($('bills'),BILLS);tiles($('coins'),COINS);
+function stamp(){if(!S.ts){$('stamp').textContent='';return}const d=new Date(S.ts);$('stamp').textContent='Updated '+d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}
+function render(){
+ const p=sum(S.pouch),w=sum(S.wallet),cur=S[where];
+ $('grand').textContent=fmt(p+w+S.bank);
+ $('s-pouch').textContent=fmt(p);$('s-wallet').textContent=fmt(w);$('s-bank').textContent=fmt(S.bank);
+ document.querySelectorAll('[data-q]').forEach(e=>{const n=cur[e.dataset.q]||0;e.textContent=n;e.classList.toggle('has',n>0)});
+ $('sec-name').textContent=cap(where)+' total';$('sec-total').textContent=fmt(sum(cur));
+ const rows=[...BILLS,...COINS].filter(v=>cur[v]);
+ $('bk').innerHTML=rows.length?rows.map(v=>`<div><span>${lab(v)} × ${cur[v]}</span><b>${fmt(v*cur[v])}</b></div>`).join(''):'<div class="empty">Nothing in your '+where+' yet.</div>';
+ document.querySelectorAll('#where button').forEach(b=>b.classList.toggle('on',b.dataset.w===where));
+ document.querySelectorAll('#mode button').forEach(b=>b.classList.toggle('on',b.dataset.m===mode));
+ document.body.classList.toggle('remove',mode==='remove');
+ $('undo').disabled=!hist.length;stamp();
+}
+function setQty(w,v,n){const b=S[w][v]||0;n=Math.max(0,Math.min(99999,n));if(n===b)return;S[w][v]=n;hist.push([w,v,b]);if(hist.length>300)hist.shift();save();render()}
+let hold=0,ring=0,held=false;
+['bills','coins'].forEach(i=>{const el=$(i);
+ const stop=()=>{clearTimeout(hold);clearTimeout(ring);el.querySelectorAll('.holding').forEach(t=>t.classList.remove('holding'))};
+ el.addEventListener('pointerdown',e=>{const b=e.target.closest('.tile');if(!b)return;held=false;stop();
+  hold=setTimeout(()=>{held=true;if(navigator.vibrate)navigator.vibrate(12);amountSheet(+b.dataset.v)},1000);ring=setTimeout(()=>b.classList.add('holding'),300)});
+ el.addEventListener('pointerup',e=>{stop();const b=e.target.closest('.tile');if(!b||held)return;
+  setQty(where,+b.dataset.v,(S[where][b.dataset.v]||0)+(mode==='add'?1:-1));if(navigator.vibrate)navigator.vibrate(4)});
+ ['pointercancel','pointerleave'].forEach(t=>el.addEventListener(t,stop));
+ el.addEventListener('contextmenu',e=>e.preventDefault());
+});
+$('where').onclick=e=>{const b=e.target.closest('button');if(b){where=b.dataset.w;render()}};
+$('mode').onclick=e=>{const b=e.target.closest('button');if(b){mode=b.dataset.m;render()}};
+$('undo').onclick=()=>{const h=hist.pop();if(!h)return;S[h[0]][h[1]]=h[2];save();render()};
+/* sheets */
+const sheet=$('sheet'),pane=$('pane');
+const open=h=>{pane.innerHTML=h;sheet.classList.add('on')};
+const close=()=>sheet.classList.remove('on');
+sheet.addEventListener('pointerdown',e=>{if(e.target===sheet)close()});
+function amountSheet(v){
+ const cur=S[where][v]||0;
+ open(`<h2>${lab(v)} in ${where}</h2><p>Currently ${cur}. Type how many.</p><input id="n" class="num" inputmode="numeric" pattern="[0-9]*" placeholder="0"><div class="acts"><button data-a="add">Add</button><button data-a="rem">Remove</button><button data-a="set" class="p">Set to</button></div>`);
+ const f=$('n');setTimeout(()=>f.focus(),60);
+ pane.querySelector('.acts').onclick=e=>{const a=e.target.dataset.a;if(!a)return;const n=parseInt(f.value.replace(/\D/g,''),10);if(isNaN(n)){f.focus();return}
+  setQty(where,v,a==='add'?cur+n:a==='rem'?cur-n:n);close()}
+}
+$('b-copy').onclick=async()=>{const j=JSON.stringify(S);try{await navigator.clipboard.writeText(j);toast('Backup copied')}catch(e){open(`<h2>Backup</h2><p>Copy this text and keep it somewhere safe.</p><textarea id="t" readonly>${j}</textarea><div class="acts two"><button id="x">Done</button></div>`);$('t').select();$('x').onclick=close}};
+$('b-restore').onclick=()=>{open(`<h2>Restore backup</h2><p>Paste a backup. This replaces what is saved now.</p><textarea id="t" placeholder="Paste backup here"></textarea><div class="acts two"><button id="x">Cancel</button><button id="ok" class="p">Restore</button></div>`);$('x').onclick=close;
+ $('ok').onclick=()=>{try{const o=JSON.parse($('t').value);if(typeof o!=='object'||!o.pouch||!o.wallet)throw 0;S={pouch:o.pouch,wallet:o.wallet,bank:o.bank|0,ts:0};hist=[];save();bank.value=S.bank?(S.bank/100).toFixed(2):'';render();close();toast('Backup restored')}catch(e){toast('That is not a valid backup')}}};
+$('b-clear').onclick=()=>{open(`<h2>Clear ${where}?</h2><p>Sets every ${where} count to zero. Bank is not changed.</p><div class="acts two"><button id="x">Cancel</button><button id="ok" class="p">Clear ${where}</button></div>`);$('x').onclick=close;$('ok').onclick=()=>{S[where]={};hist=[];save();render();close()}};
+$('b-reset').onclick=()=>{open(`<h2>Reset all data?</h2><p>Deletes Pouch, Wallet and Bank. This cannot be undone.</p><div class="acts two"><button id="x">Cancel</button><button id="ok" class="p">Delete everything</button></div>`);$('x').onclick=close;$('ok').onclick=()=>{S=fresh();hist=[];save();S.ts=0;try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}bank.value='';render();close()}};
+/* bank */
+const bank=$('bank');
+const parse=s=>{const t=s.replace(/[^0-9.]/g,'');if(!t)return 0;const[a,b='']=t.split('.');return parseInt(a||'0',10)*100+parseInt((b+'00').slice(0,2),10)};
+bank.value=S.bank?(S.bank/100).toFixed(2):'';
+bank.oninput=()=>{S.bank=parse(bank.value);save();render()};
+bank.onblur=()=>{bank.value=S.bank?(S.bank/100).toFixed(2):''};
+render();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+})();
+</script>
+</body>
+</html>
